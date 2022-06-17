@@ -1,6 +1,6 @@
 .sidebar{
     width: 350px;
-    position: absolute;
+    position: fixed;
     left: 0;
     z-index: 2;
 }
@@ -12,5 +12,23 @@
 
 
 .toggle-button{
-    float: left
+    position: fixed;
+    top: 50%;
+    background: transparent;
+    border: none
+}
+
+.toggle-button img{
+    background: #35c1a7;
+    height: 60px;
+    padding: 2px
+}
+
+.toggle-button:hover{
+    transition-duration: 0.5s;
+    transform: translateX(7px);
+}
+
+.toggle-button:active{
+    filter: invert(0.3);
 }

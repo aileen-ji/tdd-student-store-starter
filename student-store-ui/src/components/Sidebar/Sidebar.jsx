@@ -5,7 +5,7 @@ import ShoppingCart from "../ShoppingCart/ShoppingCart"
 export default function Sidebar(props) {
   return (
     <section className="sidebar">
-      <button className="toggle-button" onClick={props.handleOnToggle}>Toggle</button>
+      <button className="toggle-button" onClick={props.handleOnToggle}><img src="\src\assets\icons8-plus-+-128.png" alt="expand sidebar"/></button>
       
       {props.isOpen ?
       <div className="bar">

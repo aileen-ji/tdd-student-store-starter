@@ -4,6 +4,6 @@ import "./Logo.css"
 
 export default function Logo(props) {
   return (<div className="logo">
-    <Link to={`/`}><img src="\src\assets\icons8-isaac-newton-48.png"></img></Link>
+    <Link to={`/`}><img src="\src\assets\logo.png"></img></Link>
   </div>)
 }

@@ -1,7 +1,22 @@
-.product-grid{
+.grid{
     display:grid;
     background-color: #FFC9B9;
     grid-template-columns: auto auto auto auto;
     align-items: center;
     justify-content: center;
+}
+
+.filter-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2a08c;
+    padding: 20px;
+}
+
+.filter-bar button{
+    font-size: large;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 20px;
 }

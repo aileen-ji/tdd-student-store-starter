@@ -17,6 +17,7 @@ export default function App() {
   let [isOpen, setIsOpen] = useState(false)
   let [shoppingCart, setShoppingCart] = useState([])
   let [checkoutForm, setCheckoutForm] = useState()
+  let [filtered, setFiltered] = useState([])
 
   const handleOnToggle = () => {
     setIsOpen(!isOpen)
@@ -40,20 +41,44 @@ export default function App() {
   }
 
   const handleAddItemToCart = (productId) => {
+    
     if(shoppingCart.length == 0){
       addNewItem(productId)
     }
-    console.log(shoppingCart, shoppingCart.length)
     shoppingCart.map((item, idx)=>{
       item.itemId == productId ? 
       updateOldItem(productId) :
       (idx == shoppingCart.length-1 ? addNewItem(productId) : null)
     })
-    
+  }
+
+  const removeItem = (productId) => {
+    let copyCart = [...shoppingCart]
+    let index = copyCart.findIndex(el => el.itemId == productId)
+    console.log("found")
+    copyCart[index].quantity -= 1;
+    setShoppingCart(copyCart)
+  }
+
+  const deleteItem = (id) => {
+    console.log("delete")
+    let index = shoppingCart.findIndex(el => el.itemId == id)
+    setShoppingCart((shoppingCart)=>shoppingCart.filter((_, idx)=>idx !== index))
+     
+
   }
 
   const handleRemoveItemFromCart = (productId) => {
-    //TODO
+    if(shoppingCart.length == 0){
+      return
+    }
+    
+    shoppingCart.map((item) => {
+      item.quantity <= 0 ? deleteItem(item.itemId) : null;
+      item.itemId == productId ?  removeItem(productId) : null; 
+    })
+    shoppingCart.map((item) => {
+      item.quantity <= 0 ? deleteItem(item.itemId) : null;})
   }
 
   //TODO: check if 3 arguments is valid
@@ -68,18 +93,27 @@ export default function App() {
   const handleOnSubmitCheckoutForm = () => {
     //TODO
   }
+  async function getProduct(){
+        try{
+            let json = await axios.get('https://codepath-store-api.herokuapp.com/store')
+            if(json.data.products.length == 0){
+              setIsFetching(false)
+            }
+            else{
+              setIsFetching(true)
+            }
+            setProducts(json.data.products)
+            setFiltered(json.data.products)
+          }
+        catch(err){
+          setError(err)
+        }
+      }
 
   useEffect(() => {
-    async function getProduct(){
-      try{
-        let json = await axios.get('https://codepath-store-api.herokuapp.com/store');
-        setProducts(json.data.products)
-      } catch(err){
-        setError(err)
-      }
-    }
     getProduct()
   }, []);
+
 
   return (
     
@@ -91,8 +125,8 @@ export default function App() {
             <Route path="/" element={<> 
               <Navbar /> 
               <Sidebar isOpen={isOpen} shoppingCart={shoppingCart} products={products} checkoutForm={checkoutForm} handleOnCheckoutFormChange={handleOnCheckoutFormChange} handleOnToggle={handleOnToggle}/> 
-              <Home products={products} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} shoppingCart={shoppingCart}
-              />
+              <Home products={products} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} shoppingCart={shoppingCart} setProducts={setProducts}
+              filtered={filtered} setFiltered={setFiltered}/>
             </>}/>
             <Route path="/products/:productId" element={<><Navbar/> <Sidebar/> <ProductDetail/> </>}/>
             <Route path="*" element={<><Navbar/> <Sidebar/><NotFound/> </>}/>
