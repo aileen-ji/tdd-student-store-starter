@@ -1,12 +1,11 @@
 import * as React from "react"
 import { Link } from "react-router-dom"
 import "./ProductCard.css"
+import ProductDetail from "../ProductDetail/ProductDetail"
 
 function priceFormat(price){
     return "$"+price.toFixed(2)
 }
-
-
 
 export default function ProductCard(props) {
     let index = props.shoppingCart.findIndex(el => el.itemId == props.productId)
@@ -20,7 +19,7 @@ export default function ProductCard(props) {
   return (<div className="product-card">
     
     <div className="media">
-        <Link to={`/products/`+props.id}><img src={props.image}></img></Link>
+        <Link to={`products/`+props.productId}><img src={props.image}></img></Link>
     </div>
     <p className="product-name">{props.name}</p>
     <p className="product-price">{priceFormat(props.price)}</p>

@@ -5,8 +5,8 @@ export default function ShoppingCart(props) {
       <div className="shopping-cart">
         {props.shoppingCart.map((item) => (
             <div>
-                <p className="cart-product-name">name</p>
-                <p className="cart-product-quantity">quantity</p>
+                <p className="cart-product-name">ID: {item.itemId}</p>
+                <p className="cart-product-quantity">Quantity: {item.quantity}</p>
             </div>
         ))}
       </div>

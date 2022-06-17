@@ -4,7 +4,6 @@ import "./ProductGrid.css"
 import { useState } from "react"
 
 export default function ProductGrid(props) {
-console.log(props)
 
 const handleButton = (cat) => {
     props.setFiltered(props.products)

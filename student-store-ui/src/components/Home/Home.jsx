@@ -6,15 +6,25 @@ import { useState } from "react"
 
 
 export default function Home(props) {
+  const [term, setTerm] = useState("");
+  let arr = [...props.products]
+  
+  const handleChange = (e) => {
+    
+    props.setFiltered(arr)
+    setTerm(e.target.value)
+    console.log(e.target.value, term)
+    props.setFiltered((arr)=>arr.filter((product)=>{return product.name.toLowerCase().includes(e.target.value)}))
+
+  }
 
   return (
     <div className="home">
       <Hero />
       <div className="search-bar">
-      <form>
-            <div className="search">
-              <input id="search-input" type="text" placeholder="Search for an item..." required/>
-              <button id="search-btn"><img src="\src\assets\icons8-search-50.png" alt="search icon by icons8"/></button>
+      <form >
+            <div className="search" >
+              <input id="search-input" type="text" value={term} placeholder="Type item name..." onChange={handleChange} required />
             </div>
         </form>
       </div>
@@ -51,8 +61,54 @@ export default function Home(props) {
         </ul>
         <img src="\src\assets\pexels-shvets-production-7561704.jpg"alt="person typing on computer"></img>
       </div>
-      <div className="Footer">
-        <p>TODO Footer</p>
+      <div className="footer">
+        <div className="categories col">
+          <h3>Categories</h3>
+          <p>All Categories</p>
+          <p>Clothing</p>
+          <p>Food</p>
+          <p>Accessories</p>
+          <p>Tech</p>
+        </div>
+        <div className="company col">
+          <h3>Company</h3>
+          <p>About Us</p>
+          <p>Find a Store</p>
+          <p>Terms</p>
+          <p>Sitemap</p>
+          <p>Careers</p>
+        </div>
+        <div className="support col">
+          <h3>Support</h3>
+          <p>Contact Us</p>
+          <p>Money Refund</p>
+          <p>Order Status</p>
+          <p>Shipping Info</p>
+          <p>Open Dispute</p>
+        </div>
+        <div className="account col">
+          <h3>Account</h3>
+          <p>Login</p>
+          <p>Register</p>
+          <p>Account Settings</p>
+          <p>My Orders</p>
+        </div>
+        <div className="socials col">
+          <h3>Socials</h3>
+          <p>Facebook</p>
+          <p>Twitter</p>
+          <p>LinkedIn</p>
+          <p>Instagram</p>
+          <p>Youtube</p>
+        </div>
+        <div className="col">
+          <h3>Our App</h3>
+          <img src="\src\assets\google_play.27aab7c8.svg"></img>
+          <img src="\src\assets\app_store.a7d8c549.svg"></img>
+        </div>
+      </div>
+      <div className="credits">
+        <p>icons from icons8. Images from pexel.</p>
       </div>
     </div>
   )

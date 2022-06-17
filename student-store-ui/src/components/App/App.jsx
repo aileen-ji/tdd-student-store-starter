@@ -2,13 +2,12 @@ import * as React from "react"
 import Navbar from "../Navbar/Navbar"
 import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
-import ProductDetail from "../ProductDetail"
 import NotFound from "../NotFound"
 import "./App.css"
-import * as ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react"
 import axios from "axios"
+import ProductDetail from "../ProductDetail/ProductDetail"
 
 export default function App() {
   let [products, setProducts] = useState([])
@@ -120,16 +119,16 @@ export default function App() {
     <div className="app">
       <BrowserRouter>
         <main>
+          <Navbar /> 
+          <Sidebar isOpen={isOpen} shoppingCart={shoppingCart} products={products} checkoutForm={checkoutForm} handleOnCheckoutFormChange={handleOnCheckoutFormChange} handleOnToggle={handleOnToggle}/> 
           {/*TODO: put nav and side in home*/}
           <Routes>
             <Route path="/" element={<> 
-              <Navbar /> 
-              <Sidebar isOpen={isOpen} shoppingCart={shoppingCart} products={products} checkoutForm={checkoutForm} handleOnCheckoutFormChange={handleOnCheckoutFormChange} handleOnToggle={handleOnToggle}/> 
               <Home products={products} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} shoppingCart={shoppingCart} setProducts={setProducts}
               filtered={filtered} setFiltered={setFiltered}/>
             </>}/>
-            <Route path="/products/:productId" element={<><Navbar/> <Sidebar/> <ProductDetail/> </>}/>
-            <Route path="*" element={<><Navbar/> <Sidebar/><NotFound/> </>}/>
+            <Route path="/products/:productId" element={<ProductDetail shoppingCart={shoppingCart} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart}/>}/>
+            <Route path="*" element={<NotFound/>}/>
           </Routes>
         </main>
       </BrowserRouter>

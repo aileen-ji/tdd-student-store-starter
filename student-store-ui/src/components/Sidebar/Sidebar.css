@@ -15,7 +15,8 @@
     position: fixed;
     top: 50%;
     background: transparent;
-    border: none
+    border: none;
+    z-index: 1
 }
 
 .toggle-button img{
