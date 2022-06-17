@@ -1,0 +1,16 @@
+.sidebar{
+    width: 350px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+}
+
+.bar{
+    background-color: beige;
+    height: 100vh;
+}
+
+
+.toggle-button{
+    float: left
+}

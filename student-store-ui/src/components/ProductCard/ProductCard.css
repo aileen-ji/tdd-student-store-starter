@@ -1,0 +1,30 @@
+.product-card .media img{
+    width: 15vw;
+    height: 15vw;
+    object-fit: cover;
+    
+}
+
+.product-card{
+    padding: 10px;
+    margin: 10px;
+    background-color: #FEFEE3;
+}
+
+
+.buttons{
+    float: right;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+}
+
+.product-card button{
+    background: transparent;
+    border: none;
+    padding: 2px;
+}
+
+.product-card img{
+    width: 2vw;
+}
