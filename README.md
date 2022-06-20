@@ -278,3 +278,25 @@ The following specifications were met on the Express backend and the React front
         - **optional**:
           - [ ] `receipt` - text describing the order (what might go on a receipt)
       - [ ] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
+### Reflection
+
+* Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
+
+* I was lost on the router, and also axios was a bit confusing.
+
+* If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+  
+* I would have added more css animations and make the shopping cart look better.
+
+* Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
+
+* I was a bit unprepared and didn't finish the core feature of the pop up. I was confused at first and did some stretch features before doing the popup, so that messed things up a bit. I want to do the sliding animation side bar.
+
+### Open-source libraries used
+
+![]pexels(https://www.pexels.com/) 
+![]icons8(https://icons8.com/)
+
+### Shout out
+
+Thanks to my pod members and everyone on the discord!
