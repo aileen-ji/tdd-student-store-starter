@@ -9,7 +9,7 @@ export default function Sidebar(props) {
       
       {props.isOpen ?
       <div className="bar">
-        <p>Sidebar</p>
+        <p>Shopping Cart</p>
         <ShoppingCart isOpen={props.isOpen} products={props.products} shoppingCart={props.shoppingCart}/> 
         </div>
         : null

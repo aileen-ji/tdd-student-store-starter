@@ -33,3 +33,8 @@
 .toggle-button:active{
     filter: invert(0.3);
 }
+
+.bar p{
+    text-align: center;   
+    font-size: large; 
+}

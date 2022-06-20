@@ -1,4 +1,5 @@
 import * as React from "react"
+import "./ShoppingCart.css"
 
 function priceFormat(price){
   return "$"+price.toFixed(2)
@@ -18,7 +19,8 @@ export default function ShoppingCart(props) {
         {props.shoppingCart.map((item) => (
             <div className="cart-item">
                 <p className="cart-product-name">{props.products[item.itemId - 1].name}</p>
-                <p className="cart-product-quantity">Quantity: {item.quantity}</p>
+                <p className="cart-product-quantity">{item.quantity}</p>
+                <p>{priceFormat(props.products[item.itemId - 1].price)}</p>
                 {addSubtotal(item.quantity * props.products[item.itemId - 1].price)}
             </div>
         ))}

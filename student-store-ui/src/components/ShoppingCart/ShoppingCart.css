@@ -1,0 +1,21 @@
+.cart-item {
+    display: grid;
+    grid-template-columns: 150px 30px 30px;
+    align-content: space-around;
+    column-gap: 20px;
+    padding: 10px;
+    border-width: 2px;
+    border-color: black;
+    border-style: ridge;
+    background-color: white;
+}
+
+.shopping-cart{
+    border-width: 2px;
+    border-color: black;
+    border-style: ridge;
+    background-color: antiquewhite;
+    margin: 5px;
+    border-radius: 20px;
+    padding: 20px;
+}
