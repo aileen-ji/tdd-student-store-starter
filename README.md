@@ -294,8 +294,8 @@ The following specifications were met on the Express backend and the React front
 
 ### Open-source libraries used
 
-![]pexels(https://www.pexels.com/) 
-![]icons8(https://icons8.com/)
+pexels(https://www.pexels.com/) 
+icons8(https://icons8.com/)
 
 ### Shout out
 
