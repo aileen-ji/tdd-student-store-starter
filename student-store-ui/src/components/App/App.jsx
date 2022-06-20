@@ -2,7 +2,7 @@ import * as React from "react"
 import Navbar from "../Navbar/Navbar"
 import Sidebar from "../Sidebar/Sidebar"
 import Home from "../Home/Home"
-import NotFound from "../NotFound"
+import NotFound from "../NotFound/NotFound"
 import "./App.css"
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react"
@@ -17,6 +17,7 @@ export default function App() {
   let [shoppingCart, setShoppingCart] = useState([])
   let [checkoutForm, setCheckoutForm] = useState()
   let [filtered, setFiltered] = useState([])
+  let [constFiltered, setConstFiltered] = useState([])
 
   const handleOnToggle = () => {
     setIsOpen(!isOpen)
@@ -103,6 +104,7 @@ export default function App() {
             }
             setProducts(json.data.products)
             setFiltered(json.data.products)
+            setConstFiltered(json.data.products)
           }
         catch(err){
           setError(err)
@@ -125,9 +127,10 @@ export default function App() {
           <Routes>
             <Route path="/" element={<> 
               <Home products={products} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart} shoppingCart={shoppingCart} setProducts={setProducts}
-              filtered={filtered} setFiltered={setFiltered}/>
+              filtered={filtered} setFiltered={setFiltered} constFiltered={constFiltered} setConstFiltered={setConstFiltered}/>
             </>}/>
-            <Route path="/products/:productId" element={<ProductDetail shoppingCart={shoppingCart} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart}/>}/>
+            <Route path="/products/:productId" element={<ProductDetail shoppingCart={shoppingCart} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart}
+            setIsFetching={setIsFetching} setError={setError} products={products}/>}/>
             <Route path="*" element={<NotFound/>}/>
           </Routes>
         </main>

@@ -19,17 +19,17 @@ export default function ProductCard(props) {
   return (<div className="product-card">
     
     <div className="media">
-        <Link to={`products/`+props.productId}><img src={props.image}></img></Link>
+        <Link to={`products/`+props.productId}><img src={props.product.image}></img></Link>
     </div>
-    <p className="product-name">{props.name}</p>
-    <p className="product-price">{priceFormat(props.price)}</p>
+    <p className="product-name">{props.product.name}</p>
+    <p className="product-price">{priceFormat(props.product.price)}</p>
     <div className="buttons">
         <button className="remove" onClick={(e)=>{handleRemove(e, props.productId)}}><img src="\src\assets\icons8-minus-50.png"/></button>
         <p className="product-quantity">{index == -1? null:props.shoppingCart[index].quantity}</p>
         <button className="add" onClick={(e)=>{handleAdd(e, props.productId)}}><img src="\src\assets\icons8-plus-+-50.png"/></button>
     </div>
     {props.showDescription ? 
-        <p className="product-description">{props.description}</p> 
+        <p className="product-description">{props.product.description}</p> 
         : null} 
   </div>)
 }

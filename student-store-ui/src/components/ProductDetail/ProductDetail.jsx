@@ -4,48 +4,48 @@ import { useParams } from "react-router-dom"
 import { useEffect } from "react"
 import axios from "axios"
 import ProductView from "../ProductView/ProductView"
-import NotFound from "../NotFound"
+import NotFound from "../NotFound/NotFound"
 
 export default function ProductDetail(props) {
-    let[product, setProduct] = useState(null)
+    console.log(props)
     const { productId } = useParams()
+    let[product, setProduct] = useState(null)
+    let [notFound, setNotFound] = useState(false)
     
-    
-    function handleR() {
-      console.log("handling")
-      if(product == null){
-        return <NotFound/>
-      }
-      else{
-        return (
-          <div className="product-detail">
-            <ProductView product={product} productId={productId} price={product.price} image={product.image} description={product.description} 
-          shoppingCart={props.shoppingCart} handleAddItemToCart={props.handleAddItemToCart} handleRemoveItemFromCart={props.handleRemoveItemFromCart}/> 
-          </div>
-          )
-      }
-    }
-   
-  useEffect(() => {
-    const getProd = async() => {
+    async function getProd(){
       try{
-            let json = await axios.get('https://codepath-store-api.herokuapp.com/store/'+productId)
-            setProduct(json.data.product)
-        }catch(error){
-          console.log(error)
+          let json = await axios.get('https://codepath-store-api.herokuapp.com/store/'+productId)
+          setProduct(json.data.product)
         }
+      catch(err){
+        props.setError(err)
+        console.log(err)
+        setNotFound(true)
+      }
     }
- 
-    getProd()
-  }, []);
 
-console.log(product)
+useEffect(() => {
+  getProd()
+}, []);
 
+console.log(notFound)
+
+if(notFound){
+  return (<NotFound/>)
+}
+else if(product == null){
+  return (
+    <div className="product-detail">
+      <h2>loading...</h2>
+    </div>
+  )
+}
+else{
   return (
   <div className="product-detail">
-     {product == null ?  <ProductView product={product} productId={productId} 
-          shoppingCart={props.shoppingCart} handleAddItemToCart={props.handleAddItemToCart} handleRemoveItemFromCart={props.handleRemoveItemFromCart}/> 
-        :<NotFound/>}
+     <ProductView product={product} productId={productId} shoppingCart={props.shoppingCart} 
+     handleAddItemToCart={props.handleAddItemToCart} handleRemoveItemFromCart={props.handleRemoveItemFromCart}/> 
   </div>
   )
+}
 }

@@ -1,0 +1,6 @@
+.product-view{
+    display: grid;
+    padding: 50px;
+    align-items: center;
+    align-content: center;
+}

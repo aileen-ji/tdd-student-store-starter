@@ -9,9 +9,9 @@ export default function Navbar(props) {
       <Logo/>
       <ul>
         <li><Link to={`/`}>Home</Link></li>
-        <li>About Us</li>
-        <li>Contact Us</li>
-        <li>Buy Now</li>
+        <li><a href="../#about">About Us</a></li>
+        <li><a href="../#contact">Contact Us</a></li>
+        <li><a href="../#buy">Buy Now</a></li>
       </ul>
     </nav>
   )
