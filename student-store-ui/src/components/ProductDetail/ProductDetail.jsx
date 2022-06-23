@@ -14,7 +14,7 @@ export default function ProductDetail(props) {
     
     async function getProd(){
       try{
-          let json = await axios.get('https://codepath-store-api.herokuapp.com/store/'+productId)
+          let json = await axios.get('http://localhost:3001/store/'+productId)
           setProduct(json.data.product)
         }
       catch(err){
