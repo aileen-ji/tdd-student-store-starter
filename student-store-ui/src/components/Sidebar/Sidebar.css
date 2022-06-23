@@ -3,13 +3,17 @@
     position: fixed;
     left: 0;
     z-index: 2;
+    overflow: scroll;
+    background-color: beige;
 }
 
 .bar{
-    background-color: beige;
     height: 100vh;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
 
 .toggle-button{
     position: fixed;

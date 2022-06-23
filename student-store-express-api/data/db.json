@@ -145,5 +145,250 @@
       "price": 999.99
     }
   ],
-  "purchases": []
+  "purchases": [
+    {
+      "name": "Aileen",
+      "email": "ailinji@outlook.com",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 2
+        }
+      ],
+      "total": "NaN",
+      "createdAt": "2022-06-23T21:52:26.585Z"
+    },
+    {
+      "name": "Aileen Ji",
+      "email": "ailinji@outlook.com",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 1
+        },
+        {
+          "itemId": 4,
+          "quantity": 1
+        }
+      ],
+      "total": "NaN",
+      "createdAt": "2022-06-23T21:54:37.344Z"
+    },
+    {
+      "name": "Aileen Ji",
+      "email": "ailinji@outlook.com",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 1
+        }
+      ],
+      "total": "0.26",
+      "createdAt": "2022-06-23T22:31:46.704Z"
+    },
+    {
+      "name": "Aileen",
+      "email": "hello@gmail.com",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 1
+        },
+        {
+          "itemId": 4,
+          "quantity": 3
+        }
+      ],
+      "total": "13.85",
+      "createdAt": "2022-06-23T22:32:24.998Z"
+    },
+    {
+      "name": "Aileen Ji",
+      "email": "ailinji@outlook.com",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 3
+        }
+      ],
+      "total": "9.75",
+      "createdAt": "2022-06-23T22:41:23.178Z"
+    },
+    {
+      "name": "me",
+      "email": "me@mail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": "2.15",
+      "createdAt": "2022-06-23T22:42:36.977Z"
+    },
+    {
+      "name": "Aileen Ji",
+      "email": "ailinji@outlook.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 1
+        },
+        {
+          "itemId": 3,
+          "quantity": 1
+        }
+      ],
+      "total": "6.79",
+      "createdAt": "2022-06-23T22:46:46.709Z"
+    },
+    {
+      "name": "me",
+      "email": "me@mail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": "2.15",
+      "createdAt": "2022-06-23T22:47:09.603Z"
+    },
+    {
+      "name": "Aileen Ji",
+      "email": "hello@gmail.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 1
+        },
+        {
+          "itemId": 8,
+          "quantity": 1
+        },
+        {
+          "itemId": 7,
+          "quantity": 1
+        },
+        {
+          "itemId": 11,
+          "quantity": 1
+        },
+        {
+          "itemId": 12,
+          "quantity": 1
+        },
+        {
+          "itemId": 10,
+          "quantity": 1
+        },
+        {
+          "itemId": 15,
+          "quantity": 1
+        }
+      ],
+      "total": "742.97",
+      "createdAt": "2022-06-23T22:51:17.554Z"
+    },
+    {
+      "name": "Aileen Ji",
+      "email": "hello@gmail.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 1
+        },
+        {
+          "itemId": 3,
+          "quantity": 1
+        },
+        {
+          "itemId": 8,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "30.16",
+      "createdAt": "2022-06-23T22:51:36.620Z"
+    },
+    {
+      "name": "me",
+      "email": "me@mail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": "2.15",
+      "createdAt": "2022-06-23T22:53:25.933Z"
+    },
+    {
+      "name": "Aileen Ji",
+      "email": "ailinji@outlook.com",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 2
+        }
+      ],
+      "total": "3.26",
+      "createdAt": "2022-06-23T22:53:50.986Z"
+    },
+    {
+      "name": "Aileen Ji",
+      "email": "ailinji@outlook.com",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 3
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 8,
+          "quantity": 1
+        }
+      ],
+      "total": "33.13",
+      "createdAt": "2022-06-23T22:55:18.088Z"
+    },
+    {
+      "name": "Aileen Ji",
+      "email": "ailinji@outlook.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "total": "6.24",
+      "createdAt": "2022-06-23T22:55:52.135Z"
+    },
+    {
+      "name": "me",
+      "email": "me@mail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": "2.15",
+      "createdAt": "2022-06-23T22:56:03.391Z"
+    }
+  ]
 }

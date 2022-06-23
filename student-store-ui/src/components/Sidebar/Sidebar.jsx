@@ -1,6 +1,7 @@
 import * as React from "react"
 import "./Sidebar.css"
 import ShoppingCart from "../ShoppingCart/ShoppingCart"
+import CheckoutForm from "../CheckoutForm/CheckoutForm"
 
 export default function Sidebar(props) {
   return (
@@ -11,6 +12,9 @@ export default function Sidebar(props) {
       <div className="bar">
         <p>Shopping Cart</p>
         <ShoppingCart isOpen={props.isOpen} products={props.products} shoppingCart={props.shoppingCart}/> 
+        <CheckoutForm isOpen={props.isOpen} shoppingCart={props.shoppingCart} checkoutForm={props.checkoutForm} 
+        handleOnCheckoutFormChange={props.handleOnCheckoutFormChange} handleOnSubmitCheckoutForm={props.handleOnSubmitCheckoutForm}
+        success={props.success} error={props.error} />
         </div>
         : null
       }

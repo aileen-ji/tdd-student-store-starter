@@ -15,9 +15,10 @@ export default function App() {
   let [error, setError] = useState("")
   let [isOpen, setIsOpen] = useState(false)
   let [shoppingCart, setShoppingCart] = useState([])
-  let [checkoutForm, setCheckoutForm] = useState()
+  let [checkoutForm, setCheckoutForm] = useState({name:"", email:""})
   let [filtered, setFiltered] = useState([])
   let [constFiltered, setConstFiltered] = useState([])
+  let [success, setSuccess] = useState(false)
 
   const handleOnToggle = () => {
     setIsOpen(!isOpen)
@@ -36,7 +37,7 @@ export default function App() {
     console.log("old")
     let copyCart = [...shoppingCart]
     let index = copyCart.findIndex(el => el.itemId == productId)
-    copyCart[index].quantity += 1;
+    copyCart[index].quantity += 1
     setShoppingCart(copyCart)
   }
 
@@ -81,21 +82,35 @@ export default function App() {
       item.quantity <= 0 ? deleteItem(item.itemId) : null;})
   }
 
-  //TODO: check if 3 arguments is valid
-  const handleOnCheckoutFormChange = (props) => {
-    let newCheckoutForm = {
-      name: props.name,
-      value: props.value
+  const handleOnCheckoutFormChange = (change) => {
+    console.log(checkoutForm, change.target.name)
+    if(change.target.name == "email"){
+      setCheckoutForm({name:checkoutForm.name, email:change.target.value})
     }
-    props.setCheckoutForm(newCheckoutForm)
+    else{
+      setCheckoutForm({email:checkoutForm.email, name:change.target.value})
+    }
   }
 
-  const handleOnSubmitCheckoutForm = () => {
-    //TODO
+  async function handleOnSubmitCheckoutForm() {
+    console.log(checkoutForm, shoppingCart)
+    axios.post("http://localhost:3001/store/", {user:checkoutForm, shoppingCart:shoppingCart})
+    .then((res)=>{
+      //TODO: use res.data.purchase for the receipt
+      setSuccess(true)
+      setShoppingCart([])
+      setCheckoutForm({name:"", email:""})
+      console.log(res.data.purchase)
+    })
+    .catch((err) => {
+      setError(err)
+      setSuccess(false)
+    })
   }
+
   async function getProduct(){
         try{
-            let json = await axios.get('http://localhost:3001/store')
+            let json = await axios.get('http://localhost:3001/store/')
             if(json.data.products.length == 0){
               setIsFetching(false)
             }
@@ -122,7 +137,9 @@ export default function App() {
       <BrowserRouter>
         <main>
           <Navbar /> 
-          <Sidebar isOpen={isOpen} shoppingCart={shoppingCart} products={products} checkoutForm={checkoutForm} handleOnCheckoutFormChange={handleOnCheckoutFormChange} handleOnToggle={handleOnToggle}/> 
+          <Sidebar isOpen={isOpen} shoppingCart={shoppingCart} products={products} checkoutForm={checkoutForm} 
+          handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm} handleOnCheckoutFormChange={handleOnCheckoutFormChange} 
+          handleOnToggle={handleOnToggle} success={success} error={error}/> 
           {/*TODO: put nav and side in home*/}
           <Routes>
             <Route path="/" element={<> 
