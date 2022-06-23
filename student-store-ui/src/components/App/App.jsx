@@ -95,7 +95,7 @@ export default function App() {
   }
   async function getProduct(){
         try{
-            let json = await axios.get('https://codepath-store-api.herokuapp.com/store')
+            let json = await axios.get('http://localhost:3001/store')
             if(json.data.products.length == 0){
               setIsFetching(false)
             }

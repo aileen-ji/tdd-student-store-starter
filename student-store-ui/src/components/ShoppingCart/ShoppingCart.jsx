@@ -26,7 +26,7 @@ export default function ShoppingCart(props) {
         ))}
         <div className="money">
           <p>Subtotal:</p>
-          <p className="subtotal">${total}</p>
+          <p className="subtotal">{priceFormat(total)}</p>
           <p>Taxes and Fees:</p>
           <p>{priceFormat(total * 0.0875)}</p>
           <p>Total</p>

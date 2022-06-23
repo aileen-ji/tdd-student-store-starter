@@ -11,6 +11,7 @@
 }
 
 .shopping-cart{
+    padding-top: 30px;
     border-width: 2px;
     border-color: black;
     border-style: ridge;
@@ -18,4 +19,17 @@
     margin: 5px;
     border-radius: 20px;
     padding: 20px;
+}
+
+.notification{
+    padding-top: 30px;
+}
+
+.money{
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 150px 30px ;
+    justify-content: flex-start;
+    column-gap: 20px;
+    padding: 10px;
 }
