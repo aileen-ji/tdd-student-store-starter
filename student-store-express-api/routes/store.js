@@ -1,9 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const db = require("../data/db.json")
 const {BadRequestError, NotFoundError} = require("../utils/errors")
 const Store = require("../models/store")
-const e = require('express')
 
 router.use(express.json())
 
@@ -32,11 +30,10 @@ router.get("/:productId", async(req, res, next) => {
 })
 
 router.post("/", async(req, res, next) => {
-    const emptyString = ""
     try{
-            const newPurchase = req.body
-            const purchase = await Store.createPurchase(newPurchase)
-            res.status(201).json({purchase: purchase})
+        const newPurchase = req.body
+        const purchase = await Store.createPurchase(newPurchase)
+        res.status(201).json({purchase: purchase})
     }catch(err){
         next(err)
        }

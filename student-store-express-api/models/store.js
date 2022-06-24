@@ -45,11 +45,6 @@ class Store{
         return products
     }
 
-    static allPurchases(){
-        const purchases = storage.get("purchases")
-        return purchases
-    }
-
     static fetchSingleProductById(productId){
         const product = storage.get("products").find({id:productId}).value()
         return product

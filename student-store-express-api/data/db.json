@@ -242,6 +242,126 @@
         "Before taxes, the subtotal was $36.22",
         "After taxes and fees were applied, the total comes out to $39.39"
       ]
+    },
+    {
+      "id": 4,
+      "name": "Hello Gmail",
+      "email": "hello@gmail.com",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 1
+        },
+        {
+          "itemId": 6,
+          "quantity": 1
+        },
+        {
+          "itemId": 5,
+          "quantity": 1
+        },
+        {
+          "itemId": 7,
+          "quantity": 1
+        }
+      ],
+      "total": "38.57",
+      "createdAt": "2022-06-24T05:32:45.164Z",
+      "receipt": [
+        "Showing receipt for Hello Gmail available at hello@gmail.com:",
+        "1 total Cinnamon Rolls purchased at a cost of $2.99 for a total cost of $2.99.",
+        "1 total Bar Code Shirts purchased at a cost of $19.99 for a total cost of $19.99.",
+        "1 total Fruit Medley purchased at a cost of $7.5 for a total cost of $7.50.",
+        "1 total Striped Socks purchased at a cost of $4.99 for a total cost of $4.99.",
+        "Before taxes, the subtotal was $35.47",
+        "After taxes and fees were applied, the total comes out to $38.57"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "me",
+      "email": "me@gmail.com",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 1
+        },
+        {
+          "itemId": 3,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "8.42",
+      "createdAt": "2022-06-24T05:34:03.647Z",
+      "receipt": [
+        "Showing receipt for me available at me@gmail.com:",
+        "1 total Coconut Water purchased at a cost of $3.25 for a total cost of $3.25.",
+        "1 total Cinnamon Rolls purchased at a cost of $2.99 for a total cost of $2.99.",
+        "1 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $1.50.",
+        "Before taxes, the subtotal was $7.74",
+        "After taxes and fees were applied, the total comes out to $8.42"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "rfsg",
+      "email": "me@mail.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 2
+        }
+      ],
+      "total": "2.15",
+      "createdAt": "2022-06-24T05:39:21.187Z",
+      "receipt": [
+        "Showing receipt for rfsg available at me@mail.com:",
+        "2 total Rice Krispies purchased at a cost of $0.99 for a total cost of $1.98.",
+        "Before taxes, the subtotal was $1.98",
+        "After taxes and fees were applied, the total comes out to $2.15"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Aileen Ji",
+      "email": "ailinji@outlook.com",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 1
+        }
+      ],
+      "total": "3.25",
+      "createdAt": "2022-06-24T05:58:45.086Z",
+      "receipt": [
+        "Showing receipt for Aileen Ji available at ailinji@outlook.com:",
+        "1 total Cinnamon Rolls purchased at a cost of $2.99 for a total cost of $2.99.",
+        "Before taxes, the subtotal was $2.99",
+        "After taxes and fees were applied, the total comes out to $3.25"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "c",
+      "email": "cheetos@cheetos.com",
+      "order": [
+        {
+          "itemId": 2,
+          "quantity": 5
+        }
+      ],
+      "total": "8.16",
+      "createdAt": "2022-06-24T05:59:02.826Z",
+      "receipt": [
+        "Showing receipt for c available at cheetos@cheetos.com:",
+        "5 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $7.50.",
+        "Before taxes, the subtotal was $7.50",
+        "After taxes and fees were applied, the total comes out to $8.16"
+      ]
     }
   ]
 }

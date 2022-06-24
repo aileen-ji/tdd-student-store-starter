@@ -1,8 +1,8 @@
 const express = require('express')
 const morgan = require('morgan')
 const router = require("./routes/store")
+const orderRouter = require("./routes/order")
 const {NotFoundError} = require("./utils/errors")
-const Store = require("./models/store")
 
 const app = express()
 app.use(morgan("tiny"))
@@ -16,21 +16,14 @@ app.use(function(req, res, next) {
 
 app.use("/store", router)
 
+app.use("/orders", orderRouter)
+
 app.get("/", async(req, res, next) => {
     try{
         res.status(200).json({ping: "pong"})
     }catch(err){
         next(err)
     }
-})
-
-app.get("/orders", async(req, res, next)=>{
-    try{
-        const allData = await Store.allPurchases()
-         res.status(200).json({purchases: allData})
-        }catch(err){
-          next(err)
-        }
 })
 
 //404 error handling middleware

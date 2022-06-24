@@ -9,6 +9,7 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import ProductDetail from "../ProductDetail/ProductDetail"
 import Orders from "../Orders/Orders"
+import OrderDetail from "../OrderDetail/OrderDetail"
 
 export default function App() {
   let [products, setProducts] = useState([])
@@ -153,6 +154,7 @@ export default function App() {
             <Route path="/products/:productId" element={<ProductDetail shoppingCart={shoppingCart} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart}
             setIsFetching={setIsFetching} setError={setError} products={products}/>}/>
             <Route path="/orders" element={<Orders />}/>
+            <Route path="/orders/:purchaseId" element={<OrderDetail setError={setError}/>}/>
             <Route path="*" element={<NotFound/>}/>
           </Routes>
         </main>
