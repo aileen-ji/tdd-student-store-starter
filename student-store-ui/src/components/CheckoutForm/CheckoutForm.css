@@ -1,0 +1,27 @@
+
+.receipt{
+    width: 300px;
+    background-color: white;
+    border-width: 2px;
+    border-color: black;
+    border-style: inset;
+    margin-left: 25px;
+    justify-content: center;
+    display: flex;
+}
+
+
+.receipt li {
+    font-size: small;
+    display: block;
+    padding: 0;
+}
+
+.receipt ul{
+    display: block;
+}
+
+#header{
+    font-size: medium;
+    font-style: italic;
+}

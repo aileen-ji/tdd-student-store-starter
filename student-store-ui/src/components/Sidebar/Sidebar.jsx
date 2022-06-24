@@ -10,11 +10,11 @@ export default function Sidebar(props) {
       
       {props.isOpen ?
       <div className="bar">
-        <p>Shopping Cart</p>
+        <p id="cart">Shopping Cart</p>
         <ShoppingCart isOpen={props.isOpen} products={props.products} shoppingCart={props.shoppingCart}/> 
         <CheckoutForm isOpen={props.isOpen} shoppingCart={props.shoppingCart} checkoutForm={props.checkoutForm} 
         handleOnCheckoutFormChange={props.handleOnCheckoutFormChange} handleOnSubmitCheckoutForm={props.handleOnSubmitCheckoutForm}
-        success={props.success} error={props.error} />
+        success={props.success} error={props.error} receipt={props.receipt}/>
         </div>
         : null
       }

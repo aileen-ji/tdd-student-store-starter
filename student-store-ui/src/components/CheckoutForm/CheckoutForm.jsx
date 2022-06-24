@@ -1,13 +1,21 @@
 import * as React from "react"
+import "./CheckoutForm.css"
 
 export default function CheckoutForm(props){
    
     return(
         <div className="checkout-form">
-            <input type="email" name="email" placeholder="student@codepath.org" value={props.checkoutForm.email} onChange={props.handleOnCheckoutFormChange}></input>
-            <input type="text" name="name" placeholder="Student Name" value={props.checkoutForm.name} onChange={props.handleOnCheckoutFormChange}></input>
+            <input type="email" name="email" placeholder="student@codepath.org" value={props.checkoutForm.email} onChange={props.handleOnCheckoutFormChange} required></input>
+            <input type="text" name="name" placeholder="Student Name" value={props.checkoutForm.name} onChange={props.handleOnCheckoutFormChange} required></input>
             <button onClick={props.handleOnSubmitCheckoutForm}>Checkout</button>
-            {props.success ? (<p className="success">Success!</p>) : 
+            {props.success ? (<><p className="success">Success!</p>
+            <div className="receipt">
+                
+                <ul>
+                    <li id="header">Receipt</li>
+                    {props.receipt.map((item) => (<li>{item}</li>))}
+                </ul>
+            </div></>) : 
             (<p className="error">Error</p>)}
         </div>
     )

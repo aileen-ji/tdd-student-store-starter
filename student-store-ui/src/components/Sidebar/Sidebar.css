@@ -3,7 +3,7 @@
     position: fixed;
     left: 0;
     z-index: 2;
-    overflow: scroll;
+    overflow-y: scroll;
     background-color: beige;
 }
 
@@ -17,7 +17,7 @@
 
 .toggle-button{
     position: fixed;
-    top: 50%;
+    top: 0%;
     background: transparent;
     border: none;
     z-index: 1
@@ -38,7 +38,7 @@
     filter: invert(0.3);
 }
 
-.bar p{
+#cart{
     text-align: center;   
     font-size: large; 
 }

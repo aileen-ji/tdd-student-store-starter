@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react"
 import axios from "axios"
 import ProductDetail from "../ProductDetail/ProductDetail"
+import Orders from "../Orders/Orders"
 
 export default function App() {
   let [products, setProducts] = useState([])
@@ -19,6 +20,7 @@ export default function App() {
   let [filtered, setFiltered] = useState([])
   let [constFiltered, setConstFiltered] = useState([])
   let [success, setSuccess] = useState(false)
+  let [receipt, setReceipt] = useState([])
 
   const handleOnToggle = () => {
     setIsOpen(!isOpen)
@@ -83,6 +85,7 @@ export default function App() {
   }
 
   const handleOnCheckoutFormChange = (change) => {
+    setReceipt([])
     console.log(checkoutForm, change.target.name)
     if(change.target.name == "email"){
       setCheckoutForm({name:checkoutForm.name, email:change.target.value})
@@ -100,7 +103,8 @@ export default function App() {
       setSuccess(true)
       setShoppingCart([])
       setCheckoutForm({name:"", email:""})
-      console.log(res.data.purchase)
+      setReceipt(res.data.purchase.receipt)
+      //console.log(res.data.purchase)
     })
     .catch((err) => {
       setError(err)
@@ -139,7 +143,7 @@ export default function App() {
           <Navbar /> 
           <Sidebar isOpen={isOpen} shoppingCart={shoppingCart} products={products} checkoutForm={checkoutForm} 
           handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm} handleOnCheckoutFormChange={handleOnCheckoutFormChange} 
-          handleOnToggle={handleOnToggle} success={success} error={error}/> 
+          handleOnToggle={handleOnToggle} success={success} error={error} receipt={receipt}/> 
           {/*TODO: put nav and side in home*/}
           <Routes>
             <Route path="/" element={<> 
@@ -148,6 +152,7 @@ export default function App() {
             </>}/>
             <Route path="/products/:productId" element={<ProductDetail shoppingCart={shoppingCart} handleAddItemToCart={handleAddItemToCart} handleRemoveItemFromCart={handleRemoveItemFromCart}
             setIsFetching={setIsFetching} setError={setError} products={products}/>}/>
+            <Route path="/orders" element={<Orders />}/>
             <Route path="*" element={<NotFound/>}/>
           </Routes>
         </main>

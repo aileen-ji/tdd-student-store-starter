@@ -12,6 +12,7 @@ export default function Navbar(props) {
         <li><a href="../#about">About Us</a></li>
         <li><a href="../#contact">Contact Us</a></li>
         <li><a href="../#buy">Buy Now</a></li>
+        <li><Link to={"/orders"}>Past Orders</Link></li>
       </ul>
     </nav>
   )

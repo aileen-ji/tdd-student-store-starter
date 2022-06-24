@@ -1,0 +1,18 @@
+.purchase{
+    display: grid;
+    grid-template-columns: 10vw 20vw 10vw 20vw;
+    border-width: 2px;
+    border-color: black;
+    border-style: inset;
+    width: 60vw;
+}
+
+.purchase p{
+    padding: 5px;
+}
+
+.orders{
+    display: grid;
+    justify-content: center;
+    margin: 20px;
+}

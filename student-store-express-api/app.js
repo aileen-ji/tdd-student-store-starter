@@ -1,6 +1,8 @@
 const express = require('express')
 const morgan = require('morgan')
 const router = require("./routes/store")
+const {NotFoundError} = require("./utils/errors")
+const Store = require("./models/store")
 
 const app = express()
 app.use(morgan("tiny"))
@@ -22,6 +24,25 @@ app.get("/", async(req, res, next) => {
     }
 })
 
+app.get("/orders", async(req, res, next)=>{
+    try{
+        const allData = await Store.allPurchases()
+         res.status(200).json({purchases: allData})
+        }catch(err){
+          next(err)
+        }
+})
 
+//404 error handling middleware
+app.use((req, res, next) => {
+    return next(new NotFoundError())
+   })
+  
+   //generic error handler
+   app.use((error, req, res, next) => {
+    return res.status(error.status || 500).json({
+      error: {message: error.message || "Something went wrong in the application", status: error.status || 500}
+    })
+   })
 
 module.exports = app

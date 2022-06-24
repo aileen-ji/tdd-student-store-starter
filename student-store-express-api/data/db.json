@@ -147,46 +147,7 @@
   ],
   "purchases": [
     {
-      "name": "Aileen",
-      "email": "ailinji@outlook.com",
-      "order": [
-        {
-          "itemId": 2,
-          "quantity": 2
-        }
-      ],
-      "total": "NaN",
-      "createdAt": "2022-06-23T21:52:26.585Z"
-    },
-    {
-      "name": "Aileen Ji",
-      "email": "ailinji@outlook.com",
-      "order": [
-        {
-          "itemId": 3,
-          "quantity": 1
-        },
-        {
-          "itemId": 4,
-          "quantity": 1
-        }
-      ],
-      "total": "NaN",
-      "createdAt": "2022-06-23T21:54:37.344Z"
-    },
-    {
-      "name": "Aileen Ji",
-      "email": "ailinji@outlook.com",
-      "order": [
-        {
-          "itemId": 3,
-          "quantity": 1
-        }
-      ],
-      "total": "0.26",
-      "createdAt": "2022-06-23T22:31:46.704Z"
-    },
-    {
+      "id": 1,
       "name": "Aileen",
       "email": "hello@gmail.com",
       "order": [
@@ -196,101 +157,50 @@
         },
         {
           "itemId": 4,
-          "quantity": 3
-        }
-      ],
-      "total": "13.85",
-      "createdAt": "2022-06-23T22:32:24.998Z"
-    },
-    {
-      "name": "Aileen Ji",
-      "email": "ailinji@outlook.com",
-      "order": [
-        {
-          "itemId": 3,
-          "quantity": 3
-        }
-      ],
-      "total": "9.75",
-      "createdAt": "2022-06-23T22:41:23.178Z"
-    },
-    {
-      "name": "me",
-      "email": "me@mail.com",
-      "order": [
-        {
-          "itemId": 1,
-          "quantity": 2
-        }
-      ],
-      "total": "2.15",
-      "createdAt": "2022-06-23T22:42:36.977Z"
-    },
-    {
-      "name": "Aileen Ji",
-      "email": "ailinji@outlook.com",
-      "order": [
-        {
-          "itemId": 4,
-          "quantity": 1
-        },
-        {
-          "itemId": 3,
           "quantity": 1
         }
       ],
       "total": "6.79",
-      "createdAt": "2022-06-23T22:46:46.709Z"
+      "createdAt": "2022-06-24T04:35:07.157Z",
+      "receipt": [
+        "Showing receipt for Aileen available at hello@gmail.com:",
+        "1 total Cinnamon Rolls purchased at a cost of $2.99 for a total cost of $2.99.",
+        "1 total Coconut Water purchased at a cost of $3.25 for a total cost of $3.25.",
+        "Before taxes, the subtotal was $6.24",
+        "After taxes and fees were applied, the total comes out to $6.79"
+      ]
     },
     {
-      "name": "me",
-      "email": "me@mail.com",
+      "id": 2,
+      "name": "Aileen Ji",
+      "email": "ailinji@outlook.com",
       "order": [
         {
-          "itemId": 1,
-          "quantity": 2
-        }
-      ],
-      "total": "2.15",
-      "createdAt": "2022-06-23T22:47:09.603Z"
-    },
-    {
-      "name": "Aileen Ji",
-      "email": "hello@gmail.com",
-      "order": [
+          "itemId": 2,
+          "quantity": 1
+        },
+        {
+          "itemId": 3,
+          "quantity": 1
+        },
         {
           "itemId": 4,
           "quantity": 1
-        },
-        {
-          "itemId": 8,
-          "quantity": 1
-        },
-        {
-          "itemId": 7,
-          "quantity": 1
-        },
-        {
-          "itemId": 11,
-          "quantity": 1
-        },
-        {
-          "itemId": 12,
-          "quantity": 1
-        },
-        {
-          "itemId": 10,
-          "quantity": 1
-        },
-        {
-          "itemId": 15,
-          "quantity": 1
         }
       ],
-      "total": "742.97",
-      "createdAt": "2022-06-23T22:51:17.554Z"
+      "total": "8.42",
+      "createdAt": "2022-06-24T04:41:34.074Z",
+      "receipt": [
+        "Showing receipt for Aileen Ji available at ailinji@outlook.com:",
+        "1 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $1.50.",
+        "1 total Cinnamon Rolls purchased at a cost of $2.99 for a total cost of $2.99.",
+        "1 total Coconut Water purchased at a cost of $3.25 for a total cost of $3.25.",
+        "Before taxes, the subtotal was $7.74",
+        "After taxes and fees were applied, the total comes out to $8.42"
+      ]
     },
     {
+      "id": 3,
       "name": "Aileen Ji",
       "email": "hello@gmail.com",
       "order": [
@@ -303,92 +213,35 @@
           "quantity": 1
         },
         {
-          "itemId": 8,
-          "quantity": 1
-        },
-        {
-          "itemId": 2,
-          "quantity": 1
-        }
-      ],
-      "total": "30.16",
-      "createdAt": "2022-06-23T22:51:36.620Z"
-    },
-    {
-      "name": "me",
-      "email": "me@mail.com",
-      "order": [
-        {
-          "itemId": 1,
-          "quantity": 2
-        }
-      ],
-      "total": "2.15",
-      "createdAt": "2022-06-23T22:53:25.933Z"
-    },
-    {
-      "name": "Aileen Ji",
-      "email": "ailinji@outlook.com",
-      "order": [
-        {
-          "itemId": 2,
-          "quantity": 2
-        }
-      ],
-      "total": "3.26",
-      "createdAt": "2022-06-23T22:53:50.986Z"
-    },
-    {
-      "name": "Aileen Ji",
-      "email": "ailinji@outlook.com",
-      "order": [
-        {
-          "itemId": 3,
-          "quantity": 3
-        },
-        {
-          "itemId": 2,
-          "quantity": 1
-        },
-        {
-          "itemId": 8,
-          "quantity": 1
-        }
-      ],
-      "total": "33.13",
-      "createdAt": "2022-06-23T22:55:18.088Z"
-    },
-    {
-      "name": "Aileen Ji",
-      "email": "ailinji@outlook.com",
-      "order": [
-        {
-          "itemId": 4,
-          "quantity": 1
-        },
-        {
           "itemId": 2,
           "quantity": 1
         },
         {
           "itemId": 1,
           "quantity": 1
-        }
-      ],
-      "total": "6.24",
-      "createdAt": "2022-06-23T22:55:52.135Z"
-    },
-    {
-      "name": "me",
-      "email": "me@mail.com",
-      "order": [
+        },
         {
-          "itemId": 1,
-          "quantity": 2
+          "itemId": 5,
+          "quantity": 1
+        },
+        {
+          "itemId": 6,
+          "quantity": 1
         }
       ],
-      "total": "2.15",
-      "createdAt": "2022-06-23T22:56:03.391Z"
+      "total": "39.39",
+      "createdAt": "2022-06-24T04:45:29.801Z",
+      "receipt": [
+        "Showing receipt for Aileen Ji available at hello@gmail.com:",
+        "1 total Coconut Water purchased at a cost of $3.25 for a total cost of $3.25.",
+        "1 total Cinnamon Rolls purchased at a cost of $2.99 for a total cost of $2.99.",
+        "1 total Flamin Hot Cheetos purchased at a cost of $1.5 for a total cost of $1.50.",
+        "1 total Rice Krispies purchased at a cost of $0.99 for a total cost of $0.99.",
+        "1 total Fruit Medley purchased at a cost of $7.5 for a total cost of $7.50.",
+        "1 total Bar Code Shirts purchased at a cost of $19.99 for a total cost of $19.99.",
+        "Before taxes, the subtotal was $36.22",
+        "After taxes and fees were applied, the total comes out to $39.39"
+      ]
     }
   ]
 }
