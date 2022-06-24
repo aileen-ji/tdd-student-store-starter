@@ -8,7 +8,7 @@ function priceFormat(price){
 }
 
 export default function ProductCard(props) {
-    let index = props.shoppingCart.findIndex(el => el.itemId == props.productId)
+    console.log(props)
     const handleAdd = (event, id) => {
         props.handleAddItemToCart(id)
     }
@@ -25,7 +25,7 @@ export default function ProductCard(props) {
     <p className="product-price">{priceFormat(props.product.price)}</p>
     <div className="buttons">
         <button className="remove" onClick={(e)=>{handleRemove(e, props.productId)}}><img src="\src\assets\icons8-minus-50.png"/></button>
-        <p className="product-quantity">{index == -1? null:props.shoppingCart[index].quantity}</p>
+        <p className="product-quantity">{props.quantity}</p>
         <button className="add" onClick={(e)=>{handleAdd(e, props.productId)}}><img src="\src\assets\icons8-plus-+-50.png"/></button>
     </div>
     {props.showDescription ? 

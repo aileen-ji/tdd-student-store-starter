@@ -1,17 +1,15 @@
 .grid{
     display:grid;
-    background-color: #FFC9B9;
     grid-template-columns: auto auto auto auto;
     align-items: center;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .filter-bar{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e2a08c;
     padding: 20px;
 }
 
@@ -19,13 +17,16 @@
     font-size: large;
     margin: 10px;
     padding: 15px;
-    border-radius: 20px;
+    background: linear-gradient(to right, #4c956c 50%, #ffffff 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position 0.3s;
 }
 
 .filter-bar button:active{
     box-shadow: 3px 3px 3px black;
 }
 
-.filter-bar button:hover{
-    box-shadow: 1.5px 1.5px 1.5px black
+.filter-bar button:hover, button:active, button:focus{
+    background-position:0 0;
 }

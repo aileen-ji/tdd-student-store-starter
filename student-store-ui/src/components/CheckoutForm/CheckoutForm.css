@@ -25,3 +25,35 @@
     font-size: medium;
     font-style: italic;
 }
+
+.checkout-form input{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 10%;
+    height: 25px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+
+.checkout-form button{
+    width: 40%;
+}
+
+.checkout-form{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.success {
+    text-align: center;
+    padding: 5px;
+    color: green;
+}
+
+.error{
+    text-align: center;
+    padding: 5px;
+    color: red;
+}

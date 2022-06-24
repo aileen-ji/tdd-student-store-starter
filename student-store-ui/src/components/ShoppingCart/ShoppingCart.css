@@ -12,24 +12,26 @@
 
 .shopping-cart{
     padding-top: 30px;
-    border-width: 2px;
-    border-color: black;
-    border-style: ridge;
-    background-color: antiquewhite;
     margin: 5px;
-    border-radius: 20px;
     padding: 20px;
 }
 
 .notification{
     padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .money{
     padding-top: 5px;
     display: grid;
-    grid-template-columns: 150px 30px ;
+    grid-template-columns: 200px 30px ;
     justify-content: flex-start;
     column-gap: 20px;
     padding: 10px;
+    background-color: white;
+}
+
+.money p{
+    font-weight: 500;
 }

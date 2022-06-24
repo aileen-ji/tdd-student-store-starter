@@ -2,7 +2,6 @@ import * as React from "react"
 import "./CheckoutForm.css"
 
 export default function CheckoutForm(props){
-   
     return(
         <div className="checkout-form">
             <input type="email" name="email" placeholder="student@codepath.org" value={props.checkoutForm.email} onChange={props.handleOnCheckoutFormChange} required></input>
@@ -16,7 +15,7 @@ export default function CheckoutForm(props){
                     {props.receipt.map((item) => (<li>{item}</li>))}
                 </ul>
             </div></>) : 
-            (<p className="error">Error</p>)}
+            props.error == null ? null : (<p className="error">There was an error with your purchase.</p>)}
         </div>
     )
 }

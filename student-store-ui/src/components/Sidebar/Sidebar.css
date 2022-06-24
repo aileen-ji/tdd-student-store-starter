@@ -4,7 +4,8 @@
     left: 0;
     z-index: 2;
     overflow-y: scroll;
-    background-color: beige;
+    background-color: #EEE0CB;
+    opacity: 0.95;
 }
 
 .bar{
@@ -17,28 +18,25 @@
 
 .toggle-button{
     position: fixed;
-    top: 0%;
+    top: 2%;
     background: transparent;
     border: none;
     z-index: 1
 }
 
 .toggle-button img{
-    background: #35c1a7;
-    height: 60px;
+    height: 70px;
     padding: 2px
 }
 
-.toggle-button:hover{
-    transition-duration: 0.5s;
-    transform: translateX(7px);
-}
 
 .toggle-button:active{
-    filter: invert(0.3);
+    transform: scale(1.2);
+    transition-duration: 1s;
 }
 
 #cart{
     text-align: center;   
     font-size: large; 
+    padding-top: 30px
 }

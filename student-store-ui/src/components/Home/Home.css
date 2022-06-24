@@ -5,7 +5,6 @@
 
 .search-bar{
   padding: 40px;
-  background: #e2a08c;
 }
 
 
@@ -47,7 +46,7 @@
   justify-content: center;
   padding-left: 50px;
   padding-right: 50px;
-  background-color: #FEFEE3;
+  background-color: #EEE0cb;
 }
 
 .about p{
@@ -101,4 +100,10 @@
 .credits{
   background-color: grey;
   padding-left: 10px;
+}
+
+.main{
+  background-image: url("../src/assets/pexels-eva-elijas-7605641.jpg");
+    background-position: center;
+    background-size: cover;
 }

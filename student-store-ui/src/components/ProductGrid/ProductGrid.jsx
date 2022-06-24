@@ -16,7 +16,9 @@ export default function ProductGrid(props) {
     
     <div className="grid">
     {props.filtered.map((product) => {return(
-        <ProductCard key={product.name} product={product}
+      
+        <ProductCard key={product.name} product={product} quantity={props.shoppingCart.findIndex(el => el.itemId == product.id) == -1?
+        null : props.shoppingCart[props.shoppingCart.findIndex(el => el.itemId == product.id)].quantity}
         productId={product.id} handleAddItemToCart={props.handleAddItemToCart} handleRemoveItemFromCart={props.handleRemoveItemFromCart}
         showDescription={false} shoppingCart={props.shoppingCart}
         />

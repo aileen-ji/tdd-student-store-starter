@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
+import "./Orders/Orders.css"
 
 export default function OrderSearch(props) {
     const [term, setTerm] = useState("")

@@ -1,18 +1,32 @@
 .purchase{
     display: grid;
     grid-template-columns: 10vw 20vw 10vw 20vw;
-    border-width: 2px;
+    border-width: 1px;
     border-color: black;
     border-style: inset;
     width: 60vw;
+    background: repeating-linear-gradient(#ddd 0 35px,transparent 35px 70px);
 }
 
 .purchase p{
     padding: 5px;
+    border-width: 1px;
+    border-color: black;
+    border-style: inset;
 }
 
 .orders{
     display: grid;
     justify-content: center;
     margin: 20px;
+}
+
+.order-search-bar{
+    text-align: center;
+}
+
+.order-search-bar input{
+    font-size: large;
+    margin: 10px;
+    padding-left: 10px
 }

@@ -14,7 +14,7 @@ import OrderDetail from "../OrderDetail/OrderDetail"
 export default function App() {
   let [products, setProducts] = useState([])
   let [isFetching, setIsFetching] = useState(false)
-  let [error, setError] = useState("")
+  let [error, setError] = useState(null)
   let [isOpen, setIsOpen] = useState(false)
   let [shoppingCart, setShoppingCart] = useState([])
   let [checkoutForm, setCheckoutForm] = useState({name:"", email:""})

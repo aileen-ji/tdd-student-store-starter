@@ -16,11 +16,13 @@ export default function Home(props) {
   return (
     <div className="home">
       <Hero />
+      <div className="main">
       <CategoryFilter filtered={props.filtered} setFiltered={props.setFiltered} products={props.products} constFiltered={props.constFiltered}
       setConstFiltered={props.setConstFiltered}/>
       <SearchBar filtered={props.filtered} setFiltered={props.setFiltered} products={props.constFiltered}/>
       <ProductGrid products={props.products} handleAddItemToCart={props.handleAddItemToCart} handleRemoveItemFromCart={props.handleRemoveItemFromCart}
       shoppingCart={props.shoppingCart} setProducts={props.setProducts} filtered={props.filtered}/>
+      </div>
       <About />
       <Contacts />
       <Footer/>

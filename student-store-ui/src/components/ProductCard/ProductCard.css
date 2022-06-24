@@ -8,7 +8,12 @@
 .product-card{
     padding: 10px;
     margin: 10px;
-    background-color: #FEFEE3;
+    background-color: #EEE0cb;
+    background-image: linear-gradient(to top, #4C956C 50%, transparent 50%);
+    background-size: 100% 200%;
+    background-position: top;
+    transition: background-position 0.5s ease-in-out;
+    justify-content: center;
 }
 
 
@@ -18,6 +23,7 @@
     align-items:flex-start;
     justify-content: center;
 }
+
 
 .product-card button{
     background: transparent;
@@ -32,4 +38,9 @@
 .product-card h1{
     padding: 20px;
     float: right;
+}
+
+.product-card:hover,
+.product-card:focus {
+    background-position: bottom;
 }

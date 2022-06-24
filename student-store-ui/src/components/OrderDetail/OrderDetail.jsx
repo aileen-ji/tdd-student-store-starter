@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import NotFound from "../NotFound/NotFound"
 import axios from "axios"
+import "./OrderDetail.css"
 
 export default function OrderDetail(props) {
     
