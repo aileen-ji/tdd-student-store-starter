@@ -9,4 +9,15 @@ body {
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  
+}
+
+Link, a{
+  color: black;
+  font-style: none;
+  text-decoration: none;
+}
+
+p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

@@ -5,7 +5,6 @@
     border-color: black;
     border-style: inset;
     width: 60vw;
-    background: repeating-linear-gradient(#ddd 0 35px,transparent 35px 70px);
 }
 
 .purchase p{
@@ -29,4 +28,9 @@
     font-size: large;
     margin: 10px;
     padding-left: 10px
+}
+
+.purchase:hover{
+    background-color: #EEE0cb;
+    transition: background-color 0.5s ease-in-out;
 }

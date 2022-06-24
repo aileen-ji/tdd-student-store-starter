@@ -18,4 +18,16 @@ li{
     padding: 8px;
     margin: 8px;
     padding-right: 20px;
+    
+}
+
+.navbar li{
+    background: linear-gradient(to right, #ffffff 50%,#4c956c 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position 0.3s;
+}
+
+.navbar li:hover{
+    background-position:0 0;
 }
