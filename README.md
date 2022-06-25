@@ -4,7 +4,9 @@
 
 Selling merchandise in the modern era requires digital solutions. For this project, you'll be tasked with designing and constructing an online student store for the College of Codepath. The application entails a frontend user interface for potential customers to peruse the goods, and a backend API to handle data management. The API will be built with Node and Express and the UI will be built with React.
 
+Week 2
 ![](https://github.com/aileen-ji/tdd-student-store-starter/blob/main/student-store-ui/src/assets/walkthrough.gif)
+Week 3 - backend:
 ![](https://github.com/aileen-ji/tdd-student-store-starter/blob/main/student-store-ui/src/assets/walkthrough-new.gif)
 ### Application Features
 
@@ -76,7 +78,7 @@ The following specifications were met on the Express backend and the React front
         - [x] It should decrease the quantity of the item in the `shoppingCart` by `1`, but only if it already exists.
         - [x] If it doesn't exist, the function should do nothing.
         - [x] If the new quantity is `0`, it should remove the item from the `shoppingCart`
-      - [ ] The **`handleOnCheckoutFormChange`** function. When called...
+      - [x] The **`handleOnCheckoutFormChange`** function. When called...
         - [x] It should receive two arguments:
           - [x] `name` - the `name` attribute of the input being updated
           - [x] `value` - the new value to set for that input
@@ -280,8 +282,8 @@ The following specifications were met on the Express backend and the React front
           - [x] `receipt` - text describing the order (what might go on a receipt)
       - [x] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
 =======
-          - [ ] `receipt` - text describing the order (what might go on a receipt)
-      - [ ] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
+          - [x] `receipt` - text describing the order (what might go on a receipt)
+      - [x] It should then send a JSON response back to the client with the new purchase like so: `{ "purchase": purchase }`. The response should have a `201` status code for a resource created action.
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
